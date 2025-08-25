@@ -79,7 +79,6 @@ app.get("/users/:email", async (req, res) => {
     const { email } = req.params; // extract email from URL
     console.log("Searching for user by email:", email);
 
-    // Find one user (since emails are usually unique)
     const user = await userCollection.findOne({ email });
 
 
