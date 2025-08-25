@@ -24,7 +24,7 @@ app.use(express.json());  // Parse JSON request body
 async function run() {
   try {
     // Connect the client to the server	(optional starting in v4.7)
-    await client.connect();
+    // await client.connect();
     db = client.db("shoeCollection");
     const userCollection = db.collection('users')
     app.post("/bags", async (req, res) => {
